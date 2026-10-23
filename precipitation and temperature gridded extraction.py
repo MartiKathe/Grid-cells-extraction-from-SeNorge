@@ -136,13 +136,13 @@ df_export_tm.index = df_export_tm.index.strftime('%d.%m.%Y %H:%M:%S')
 df_export_tm.columns = ['tm(Celcius)']
 
 # Write precipitation CSV
-with open("ExampleCatchment BASELINE daily precipitation grid cells.csv", "w", encoding="utf-8") as f_rr:  #change ExampleCatchment to catchment name
+with open("ExampleCatchment daily precipitation grid cells.csv", "w", encoding="utf-8") as f_rr:  #change ExampleCatchment to catchment name
     f_rr.write(header_rr)
     # float_format='%.1f' ensures numbers look like -0.2 instead of -0.20000000000000004
     df_export_rr.to_csv(f_rr, sep=';', index_label='Date', float_format='%.1f')
 
 # Write temperature CSV
-with open("ExampleCatchment BASELINE daily temperature grid cells.csv", "w", encoding="utf-8") as f_tm:  #change ExampleCatchment to catchment name
+with open("ExampleCatchment daily temperature grid cells.csv", "w", encoding="utf-8") as f_tm:  #change ExampleCatchment to catchment name
     f_tm.write(header_tm)
     df_export_tm.to_csv(f_tm, sep=';', index_label='Date', float_format='%.1f')
 
