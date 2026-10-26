@@ -163,7 +163,6 @@ for file_path in files_to_clean:
         lines = f.readlines()
 
     # Open the file again in 'write' mode to overwrite it
-    # newline='' ensures Windows doesn't sneak those extra spaces back in
     with open(file_path, 'w', encoding='utf-8', newline='') as f:
         for line in lines:
             # .strip() removes invisible spaces. If the line has actual text, it writes it.
