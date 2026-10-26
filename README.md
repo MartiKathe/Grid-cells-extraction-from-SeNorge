@@ -3,4 +3,6 @@ The code in file "**precipitation and temperature gridded.py**" requires a shape
 
 The code in file "**PINEHBV input file generation.py**" creates an Excel file in the format required by PINEHBV software. The values for runoff are set to 0 (since the PINEHBV software will simulate and fill these values). The Excel file produced will contain the temperature and precipitation series previously generated. 
 
-PINEHBV requires a tabulated txt: .*txt file. This was created manually by opening the produced file on Excel and converting it into a tabulated txt format. 
+PINEHBV requires a tabulated txt: *.txt file. This was created manually by opening the produced file on Excel and converting it into a tabulated txt format. 
+
+Finally, the optional code in "evapotranspiration extraction.py" extracts percentage increase values for the evapotranspiration from KSS for the rcp45 scenario for the shapefile in input (catchment shapefile). The value under change-evap_annual could be used as a percentage increase of the baseline value in PINEHBV if simulating future climate inflows, for example. 
